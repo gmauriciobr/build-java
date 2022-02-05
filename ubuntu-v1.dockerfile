@@ -4,5 +4,4 @@ COPY demo /opt/app
 WORKDIR /opt/app
 EXPOSE 8080
 CMD mvn clean package -DskipTests
-WORKDIR /opt/app/target
-ENTRYPOINT ["java", "-jar", "demo.jar"]
+ENTRYPOINT ["java", "-jar", "/opt/app/target/demo.jar"]
